@@ -1,0 +1,25 @@
+﻿@model ListMusicViewModel
+
+<div class="col">
+    <a class="btn btn-primary" asp-controller="Home" asp-action="AddMusic">Add Music</a>
+</div>
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th>Name of Music</th>
+                <th>Artist</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var music in Model.ListMusic)
+            {
+                <tr>
+                    <td class="text-center">@music.Name </td>
+                    <td class="text-left">@music.Artist.Name </td>
+
+                </tr>
+            }
+        </tbody>
+
+ </table>

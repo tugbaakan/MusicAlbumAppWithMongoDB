@@ -1,0 +1,29 @@
+﻿@model ComposerViewModel
+<span class="btn-danger">@ViewBag.MessageError</span>
+<form asp-controller="Composer" asp-action="AddComposer" method="post" class="col-12 form-horizontal" role="form">
+
+    <div asp-validation-summary="All" class="text-danger"></div>
+
+
+    <div class="form-group">
+        <label asp-for="@Model.FirstName" class="col-md-2 control-label"></label>
+        <div class="col-md-5">
+            <input asp-for="@Model.FirstName" class="form-control" />
+            <span asp-validation-for="@Model.FirstName" class="text-danger"></span>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="@Model.LastName" class="col-md-2 control-label"></label>
+        <div class="col-md-5">
+            <input asp-for="@Model.LastName" class="form-control" />
+            <span asp-validation-for="@Model.LastName" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-5">
+            <input type="submit" class="btn btn-primary" value="Add Composer" />
+        </div>
+    </div>
+</form>
+

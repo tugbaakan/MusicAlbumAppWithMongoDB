@@ -1,0 +1,26 @@
+﻿
+
+@model ListComposerViewModel
+
+    <div class="col">
+        <a class="btn btn-primary" asp-controller="Composer" asp-action="AddComposer">Add Composer</a>
+    </div>
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var composer in Model.Composers)
+        {
+            <tr>
+                <td class="text-center">@composer.FirstName </td>
+                <td class="text-left">@composer.LastName </td>
+            </tr>
+        }
+    </tbody>
+
+</table>
